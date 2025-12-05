@@ -27,23 +27,6 @@
 #include "combos.dtsi"
 
 / {
-    trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball>;
-        snipe {
-            layers = <MOUS>;
-            input-processors = 
-                <&zip_xy_scaler 1 2>,
-                <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>;
-        };
-        scroll {
-            layers = <SCRL>;
-            input-processors = 
-                <&zip_xy_scaler 1 2>,
-                <&zip_xy_to_scroll_mapper>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
