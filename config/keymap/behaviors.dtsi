@@ -100,6 +100,7 @@
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
             timeout-ms = <2500>;
         };
+        
         swap_prev: swap_prev {
             compatible = "zmk,behavior-tri-state";
             #binding-cells = <0>;
