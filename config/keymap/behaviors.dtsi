@@ -62,6 +62,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <350>;
             bindings = <&mo>, <&kp>;
+            hold-while-undecided;
         };
 
         skq: sticky_key_quick_release {
