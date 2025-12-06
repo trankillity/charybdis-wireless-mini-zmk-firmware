@@ -38,8 +38,8 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <160>;
-            require-prior-idle-ms = <65>;
-            retro-tap;
+            require-prior-idle-ms = <300>;
+            /*retro-tap;*/
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
         };
@@ -50,10 +50,18 @@
             flavor = "balanced";
             tapping-term-ms = <280>;
             quick-tap-ms = <160>;
-            require-prior-idle-ms = <55>;
-            retro-tap;
+            require-prior-idle-ms = <300>;
+            /*retro-tap;*/
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
+        };
+
+        ltm: layer_tap_mouse {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            bindings = <&mo>, <&kp>;
         };
 
         skq: sticky_key_quick_release {
@@ -63,14 +71,6 @@
             release-after-ms = <500>;
             quick-release;
             ignore-modifiers;
-        };
-
-        ltm: layer_tap_mouse {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            bindings = <&mo>, <&kp>;
         };
 
         num_fun: num_function {

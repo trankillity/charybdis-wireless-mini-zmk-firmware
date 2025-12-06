@@ -42,7 +42,7 @@
             bindings = <
     &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
     &hml LGUI A     &hml LALT R     &hml LCTL S     &hml LSHIFT T   &kp G           &kp M           &hmr RSHIFT N   &hmr RCTRL E    &hmr RALT I     &hmr RGUI O
-    &kp Z           &kp X           &kp C           &ltm MOUS D     &kp V           &kp K           &ltm MOUS H     &mm_csemi       &mm_dcoln       &kp FSLH
+    &ltm MOUS Z     &kp X           &kp C           &ltm MOUS D     &kp V           &kp K           &ltm MOUS H     &mm_csemi       &mm_dcoln       &ltm MOUS FSLH
                                     &ltm SCRL BSPC  &sft_caps       &num_fun        &lt NAVI ENTER  &kp SPACE
             >;
         };
@@ -78,8 +78,8 @@
             bindings = <
     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none
     &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHIFT      &none           &none           &kp RSHIFT      &kp RCTRL       &kp RALT        &kp RGUI
-    &mo SCRL        &none           &none           &none           &none           &none           &none           &none           &none           &mo SCRL
-                                    &mkp MB2        &mkp MB1        &mkp MB3        &mkp MB3        &mkp MB2
+    &trans          &none           &none           &none           &none           &none           &none           &none           &none           &trans
+                                    &mkp MB2        &mkp MB1        &mkp MB3        &none           &none
             >;
         };
 
@@ -91,7 +91,7 @@
                                     &trans          &trans          &trans          &trans          &trans
             >;
         };
-        
+
         syst_layer {
             bindings = <
     &bootloader     &sys_reset      &none           &none           &out OUT_BLE    &out OUT_USB    &none           &none           &sys_reset      &bootloader
