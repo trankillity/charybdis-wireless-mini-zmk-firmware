@@ -3,7 +3,10 @@
 
 &trackball_listener {
     /* base processor chain on all layers */
-    input-processors = <&zip_xy_scaler 1 1>;
+    input-processors = <
+        &pointer_accel
+        &zip_xy_scaler 1 1
+    >;
 
     /* Mouse layer slow-pointer override */
     slow_pointer: slow_pointer {
@@ -15,7 +18,7 @@
     scroller: scroller {
         layers           = <5>;
         input-processors = <
-            &zip_xy_scaler 1 4                               // Scales the scroll speed
+            &zip_xy_scaler 1 5                               // Scales the scroll speed
             &zip_xy_to_scroll_mapper                         // Converts XY movement to scroll events
             &zip_scroll_transform (INPUT_TRANSFORM_Y_INVERT) // Inverts the scroll direction
         >;

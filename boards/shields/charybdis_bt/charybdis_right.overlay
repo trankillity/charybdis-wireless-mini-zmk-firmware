@@ -2,6 +2,9 @@
 #include "charybdis_pmw3610.dtsi"
 #include "charybdis_pointer.dtsi"
 
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+
 // The matrix transform is 6 columns over because the left half is 6 columns wide.
 &six_column_transform {
 	col-offset = <6>;
@@ -30,6 +33,16 @@
 		, <&pro_micro 4 GPIO_ACTIVE_HIGH>
 		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
 		;
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;  // For relative input devices
+    track-remainders;             // Accumulate fractional movements
+    min-factor = <800>;          // 0.8x at very slow speeds
+    max-factor = <3000>;         // 3.0x at fast speeds
+    speed-threshold = <1200>;     // 1200 counts/sec for 1x
+    speed-max = <6000>;          // 6000 counts/sec for max accel
+    acceleration-exponent = <2>;  // Quadratic acceleration curve
 };
 
 /* enable the listener on central */

@@ -9,6 +9,8 @@ manifest:
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
 
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov
 
   projects:
     - name: zmk
@@ -22,6 +24,10 @@ manifest:
 
     - name: zmk-tri-state
       remote: dhruvinsh
+      revision: main
+
+    - name: zmk-pointing-acceleration
+      remote: oleksandrmaslov
       revision: main
 
   self:
