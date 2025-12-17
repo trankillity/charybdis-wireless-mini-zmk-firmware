@@ -4,7 +4,6 @@
 &trackball_listener {
     /* base processor chain on all layers */
     input-processors = <
-        &pointer_accel
         &zip_xy_scaler 1 1
     >;
 

@@ -41,7 +41,7 @@
             require-prior-idle-ms = <300>;
             /*retro-tap;*/
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-key-positions = <KEYS_R>;
         };
 
         hmr: homerow_modsr {
@@ -53,7 +53,7 @@
             require-prior-idle-ms = <300>;
             /*retro-tap;*/
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-key-positions = <KEYS_L>;
         };
 
         ltm: layer_tap_mouse {
