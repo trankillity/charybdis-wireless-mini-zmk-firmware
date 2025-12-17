@@ -9,8 +9,8 @@ manifest:
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
 
-    - name: oleksandrmaslov
-      url-base: https://github.com/oleksandrmaslov
+    # - name: oleksandrmaslov
+    #   url-base: https://github.com/oleksandrmaslov
 
   projects:
     - name: zmk
@@ -26,9 +26,9 @@ manifest:
       remote: dhruvinsh
       revision: main
 
-    - name: zmk-pointing-acceleration
-      remote: oleksandrmaslov
-      revision: main
+    # - name: zmk-pointing-acceleration
+    #   remote: oleksandrmaslov
+    #   revision: main
 
   self:
     path: config
